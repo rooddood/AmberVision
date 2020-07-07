@@ -1,0 +1,17 @@
+# AmberVision
+
+## Startup
+
+Set up a virtual environment:
+
+- `virtualenv -p python3 env`
+- `source env/bin/activate`
+- `pip install -r requirements.txt`
+
+Run these commands to start up app:
+Run them in two different terminals!
+
+- `python api.py`
+- `python demo.py` (located in keras-yolo3/demo.py)
+
+Open index.html in browser (located in vue/index.html)

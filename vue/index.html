@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Amber Vision Alert Map</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css">
+    <link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" style="color: #FF7E00;" href="index.html"><h1>Amber Vision</h1></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="query.html">Query Page</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <br>
+    <div class="container-fluid" id="app">
+
+      <div class="row">
+        <div class="col-md-6">
+          <!-- <p> To test if Axios API requests are working: {{results}} </p> -->
+          <div class="map" id="map"></div>
+          <div
+            class="form-check"
+            v-for="layer in layers"
+            :key="layer.id"
+          >
+            <label class="form-check-label">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                v-model="layer.active"
+                @change="layerChanged(layer.id, layer.active)"
+              />
+              {{ layer.name }}
+            </label>
+          </div>
+          <p> Cameras provided by <a href="http://www.trafficland.com">TrafficLand </a></p>
+        </div>
+        <div class = "col-md-6">
+          <template v-if="imageSelected">
+            <img :src="getImage(pic)" class="rounded">
+            <h1> Camera ID: {{fake_cam_data.camId}} </h1>
+            <h1> Updated at: {{updated_pic}} </h1>
+            <h2> Coordinates: {{fake_cam_data.coords}} </h2>
+            <h2> Camera orientation: {{fake_cam_data.orientation}} </h2>
+            <br>
+            <br>
+            <br>
+            <div class="justify-content-center">
+              <button type="button" class="btn btn-primary"> Previous Camera </button>
+              <button type="button" class="btn btn-primary"> Next Camera </button>
+            </div>
+          </template>
+
+        </div>
+
+      </div>
+      <hr>
+      <div class="row">
+        <template v-if="imageSelected">
+          <!-- <div class="col-md-6"> -->
+          <h1> All Images </h1>
+              <!-- <img v-for="image in test_list" :src="image" :alt="image" /> -->
+          <p v-for="object in all_results"></p>
+          <!-- </div> -->
+        </template>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="appmock100.js"></script>
+
+  </body>
+
+</html>

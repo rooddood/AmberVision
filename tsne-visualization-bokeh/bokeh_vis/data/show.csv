@@ -1,0 +1,10 @@
+tsne_y,tsne_x,plot_id,cultivar_id,image_path,date,canopy_height,leaf_desiccation_present,leaf_length,leaf_width,panicle_height,stalk_diameter_major_axis,stalk_diameter_minor_axis,stem_elongated_internodes_number
+-47.69837,-18.979895,751,201,./terraref/scanner3DTop/lime_cardinal_dataset/dataset/708/2017-06-02__09-35-25-144_west_0.png,2017-06-02,125.0,nan,nan,nan,nan,nan,nan,nan
+-61.33161,0.19872259,751,201,./terraref/scanner3DTop/lime_cardinal_dataset/dataset/708/2017-06-02__09-35-25-144_west_1.png,2017-06-02,125.0,nan,nan,nan,nan,nan,nan,nan
+-36.00444,-4.2206683,751,201,./terraref/scanner3DTop/lime_cardinal_dataset/dataset/708/2017-06-02__09-37-12-268_west_0.png,2017-06-02,125.0,nan,nan,nan,nan,nan,nan,nan
+-32.510345,-20.304407,751,201,./terraref/scanner3DTop/lime_cardinal_dataset/dataset/708/2017-06-02__09-37-12-268_west_1.png,2017-06-02,125.0,nan,nan,nan,nan,nan,nan,nan
+-36.241756,-13.228691,751,201,./terraref/scanner3DTop/lime_cardinal_dataset/dataset/708/2017-06-02__09-38-59-182_west_0.png,2017-06-02,125.0,nan,nan,nan,nan,nan,nan,nan
+-47.93537,-23.445442,751,223,./terraref/scanner3DTop/lime_cardinal_dataset/dataset/708/2017-06-02__09-38-59-182_west_1.png,2017-06-02,125.0,nan,nan,nan,nan,nan,nan,nan
+-46.680767,1.553112,722,223,./terraref/scanner3DTop/lime_cardinal_dataset/dataset/708/2017-06-02__09-40-46-081_west_0.png,2017-06-02,125.0,nan,nan,nan,nan,nan,nan,nan
+-50.24451,-3.0256116,722,223,./terraref/scanner3DTop/lime_cardinal_dataset/dataset/708/2017-06-02__09-40-46-081_west_1.png,2017-06-02,125.0,nan,nan,nan,nan,nan,nan,nan
+-56.12781,-15.238422,722,223,./terraref/scanner3DTop/lime_cardinal_dataset/dataset/708/2017-06-02__09-42-32-768_west_0.png,2017-06-02,125.0,nan,nan,nan,nan,nan,nan,nan

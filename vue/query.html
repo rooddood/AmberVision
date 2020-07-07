@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Amber Vision Alert Query</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css">
+    <link rel="stylesheet" href="styles.css">
+
+
+  </head>
+
+  <body>
+    <!-- <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand" style="color: #FF7E00;"><h1>Amber Vision</h1></a>
+      <a class="navbar-item">Query</a>
+    </nav> -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" style="color: #FF7E00;" href="index.html"><h1>Amber Vision</h1></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#query.html">Query Page</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <br>
+    <div class="container-fluid" id="app">
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Car Color
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" @click="changeColor('Red')">Red</a>
+          <a class="dropdown-item" @click="changeColor('White')">White</a>
+          <a class="dropdown-item" @click="changeColor('Black')">Black</a>
+          <a class="dropdown-item" @click="changeColor('Yellow')">Yellow</a>
+        </div>
+      </div>
+      <p> {{car_color}} </p>
+      <br>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Car Size
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" @click="changeSize('Car')">Car</a>
+          <a class="dropdown-item" @click="changeSize('Truck')">Truck</a>
+          <a class="dropdown-item" @click="changeSize('Bus')">Bus</a>
+
+        </div>
+      </div>
+      <p> {{car_size}} </p>
+
+      <hr>
+
+      <!-- <p> {{fps}} </p> -->
+      <!-- <p> {{results}} </p> -->
+      <template v-for="object in this.results">
+
+        <template v-if="object.filepath.includes('detected')">
+          <img v-if="object.classes.includes(car_size)" :src="process(object.filepath)"  style="width:200px;height:150px;">
+          <!-- <img :src="process(object.filepath)"  style="width:200px;height:150px;"> -->
+        </template>
+
+      </template>
+      <!-- use bootstrap questions -->
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="app_query.js"></script>
+
+  </body>
+
+
+
+</html>
