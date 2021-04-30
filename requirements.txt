@@ -134,7 +134,7 @@ termcolor==1.1.0
 toolz==0.10.0
 tornado==6.0.3
 typed-ast==1.4.0
-urllib3==1.25.6
+urllib3==1.25.8
 webencodings==0.5.1
 Werkzeug==0.16.0
 wrapt==1.11.2
