@@ -58,7 +58,7 @@ fastcache==1.1.0
 filelock==3.0.12
 Fiona==1.8.11
 Flask==1.1.1
-Flask-Cors==3.0.8
+Flask-Cors==3.0.9
 fsspec==0.5.2
 future==0.17.1
 gast==0.2.2
